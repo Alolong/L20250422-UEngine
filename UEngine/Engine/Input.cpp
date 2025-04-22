@@ -1,0 +1,25 @@
+#include "Input.h"
+#include "conio.h"
+
+
+
+int UInput::KeyCode = 0;
+
+UInput::UInput()
+{
+}
+UInput::~UInput()
+{
+}
+
+void UInput::Tick()
+{
+	if (_kbhit())
+	{
+		KeyCode = _getch();
+	}
+	else
+	{
+		KeyCode = 0;
+	}
+}
